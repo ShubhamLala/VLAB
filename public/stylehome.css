@@ -1,0 +1,127 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#VITLINK
+{
+    text-decoration: none;
+}
+.foot
+{
+margin: 1% .5%;
+}
+.foot
+{
+    display: flex;
+    justify-content: left;
+    margin-bottom: 0;
+}
+.nav-item
+{
+    color: white;
+}
+.navbar-toggler-icon {
+    background-color: #FF5500;
+  }
+.navbar-brand{
+    align-content: center;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.logged
+{
+    margin-bottom: 10%;
+}
+
+.heading
+{
+    margin: auto;
+    background-color:rgb(255, 255, 255);
+}
+.heading h1
+{
+    margin: auto;
+    color: black;
+    display: flex;
+    justify-content: center;
+    font-size: 5vw;
+}
+.heading .image
+{
+    float: left;
+}
+.heading ul
+{
+    display: inline-flex;
+    list-style-type: none;
+    margin-right: 15px;
+    text-decoration: none;
+    margin-top: 10px;
+    box-align: right;
+    text-align: right;
+    font-size: 1.2em;
+}
+.heading ul li
+{
+    margin-top: 20px;
+    padding: 10px;
+
+}
+.heading ul li:first-child
+{
+    border-right: 1px solid #fff;
+
+}
+.heading ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+.headingv
+{
+    margin-left: auto;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+.headingl
+{
+    float: right;
+}
+.active
+{
+    background-color: #FF5500;
+}
+.instruction{
+    background-color: #fff;
+    box-shadow: 0 0 10px black;
+    width: 80%;
+    position: relative;
+    font-size: large;
+    margin: auto;
+    padding: 2%;
+    border-radius: 10px;
+    justify-content: center;
+    margin-top: 2%;
+}
+#red{
+    color: red;
+}
+#green{
+    color: rgb(0, 255, 0);
+}
+#purple{
+    color: rgb(255, 0, 255);
+}
+input:focus{
+    outline: none;
+}
+button:focus{
+    outline: none;
+}

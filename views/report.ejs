@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylereport.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylereport.css">
+    <!-- Charts Section -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart','bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Topic', 'Attempted', 'Correct', 'Incorrect'],
+          ['I/O', Number('<%= result.c_titles[0].inputoutput %>'), Number('<%= result.c_titles[0].corr_inputoutput %>'), Number('<%= result.c_titles[0].incorr_inputoutput %>')],
+          ['Arrays', Number('<%= result.c_titles[0].arrays %>'), Number('<%= result.c_titles[0].corr_arrays %>'), Number('<%= result.c_titles[0].incorr_arrays %>')],
+          ['String', Number('<%= result.c_titles[0].string %>'), Number('<%= result.c_titles[0].corr_string %>'), Number('<%= result.c_titles[0].incorr_string %>')],
+          ['Library Func', Number('<%= result.c_titles[0].libraryfunction %>'), Number('<%= result.c_titles[0].corr_libraryfunction %>'), Number('<%= result.c_titles[0].incorr_libraryfunction %>')],
+          ['Pointer', Number('<%= result.c_titles[0].pointer %>'), Number('<%= result.c_titles[0].corr_pointer %>'), Number('<%= result.c_titles[0].incorr_pointer %>')],
+          ['Structure/Union', Number('<%= result.c_titles[0].structureandunion %>'), Number('<%= result.c_titles[0].corr_structureandunion %>'), Number('<%= result.c_titles[0].incorr_structureandunion %>')],
+          ['Func', Number('<%= result.c_titles[0]._function %>'), Number('<%= result.c_titles[0].corr__function %>'), Number('<%= result.c_titles[0].incorr__function %>')],
+          ['Basic', Number('<%= result.c_titles[0].basic %>'), Number('<%= result.c_titles[0].corr_basic %>'), Number('<%= result.c_titles[0].incorr_basic %>')],
+          ['Operator', Number('<%= result.c_titles[0].operator %>'), Number('<%= result.c_titles[0].corr_operator %>'), Number('<%= result.c_titles[0].incorr_operator %>')],
+          ['Mem Alloc', Number('<%= result.c_titles[0].memoryallocation %>'), Number('<%= result.c_titles[0].corr_memoryallocation %>'), Number('<%= result.c_titles[0].incorr_memoryallocation %>')],
+          ['Control Structure', Number('<%= result.c_titles[0].controlstructure %>'), Number('<%= result.c_titles[0].corr_controlstructure %>'), Number('<%= result.c_titles[0].incorr_controlstructure %>')],
+          ['Typedef', Number('<%= result.c_titles[0].typedef %>'), Number('<%= result.c_titles[0].corr_typedef %>'), Number('<%= result.c_titles[0].incorr_typedef %>')],
+          ['Expressions', Number('<%= result.c_titles[0].expressions %>'), Number('<%= result.c_titles[0].corr_expressions %>'), Number('<%= result.c_titles[0].incorr_expressions %>')],
+          ['Preprocessor', Number('<%= result.c_titles[0].preprocessor %>'), Number('<%= result.c_titles[0].corr_preprocessor %>'), Number('<%= result.c_titles[0].incorr_preprocessor %>')],
+          ['Command Line', Number('<%= result.c_titles[0].cmdlnearg %>'), Number('<%= result.c_titles[0].corr_cmdlnearg %>'), Number('<%= result.c_titles[0].incorr_cmdlnearg %>')],
+          ['Datatypes', Number('<%= result.c_titles[0].datatypes %>'), Number('<%= result.c_titles[0].corr_datatypes %>'), Number('<%= result.c_titles[0].incorr_datatypes %>')]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'C',
+            subtitle: 'Topic wise Correct and Incorrect answering',
+          },
+          colors: ['#FF9B1D','#7CFC00','#ff0000'],
+          bars: 'vertical' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('c_chart'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart','bar']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Topic', 'Attempted', 'Correct', 'Incorrect'],
+      ['Class', Number('<%= result.cpp_titles[0].class %>'), Number('<%= result.cpp_titles[0].corr_class %>'), Number('<%= result.cpp_titles[0].incorr_class %>')],
+      ['Overloading', Number('<%= result.cpp_titles[0].overloading %>'), Number('<%= result.cpp_titles[0].corr_overloading %>'), Number('<%= result.cpp_titles[0].incorr_overloading %>')],
+      ['Exceptions', Number('<%= result.cpp_titles[0].exceptions %>'), Number('<%= result.cpp_titles[0].corr_exceptions %>'), Number('<%= result.cpp_titles[0].incorr_exceptions %>')],
+      ['Streams', Number('<%= result.cpp_titles[0].streams %>'), Number('<%= result.cpp_titles[0].corr_streams %>'), Number('<%= result.cpp_titles[0].incorr_streams %>')],
+      ['Namespace', Number('<%= result.cpp_titles[0].namespaces %>'), Number('<%= result.cpp_titles[0].corr_namespaces %>'), Number('<%= result.cpp_titles[0].incorr_namespaces %>')],
+      ['Templates', Number('<%= result.cpp_titles[0].templates %>'), Number('<%= result.cpp_titles[0].corr_templates %>'), Number('<%= result.cpp_titles[0].incorr_templates %>')],
+      ['Inheritance', Number('<%= result.cpp_titles[0].inheritance %>'), Number('<%= result.cpp_titles[0].corr_inheritance %>'), Number('<%= result.cpp_titles[0].incorr_inheritance %>')],
+      ['Const/Des', Number('<%= result.cpp_titles[0].consdes %>'), Number('<%= result.cpp_titles[0].corr_consdes %>'), Number('<%= result.cpp_titles[0].incorr_consdes %>')],
+      ['Arrays', Number('<%= result.cpp_titles[0].arrays %>'), Number('<%= result.cpp_titles[0].corr_arrays %>'), Number('<%= result.cpp_titles[0].incorr_arrays %>')],
+      ['Basic', Number('<%= result.cpp_titles[0].basic %>'), Number('<%= result.cpp_titles[0].corr_basic %>'), Number('<%= result.cpp_titles[0].incorr_basic %>')],
+      ['Operator', Number('<%= result.cpp_titles[0].operator %>'), Number('<%= result.cpp_titles[0].corr_operator %>'), Number('<%= result.cpp_titles[0].incorr_operator %>')],
+      ['Pointer', Number('<%= result.cpp_titles[0].pointer %>'), Number('<%= result.cpp_titles[0].corr_pointer %>'), Number('<%= result.cpp_titles[0].incorr_pointer %>')],
+      ['Function', Number('<%= result.cpp_titles[0]._function %>'), Number('<%= result.cpp_titles[0].corr__function %>'), Number('<%= result.cpp_titles[0].incorr__function %>')],
+      ['Library Function', Number('<%= result.cpp_titles[0].libraryfunction %>'), Number('<%= result.cpp_titles[0].corr_libraryfunction %>'), Number('<%= result.cpp_titles[0].incorr_libraryfunction %>')]
+    ]);
+
+    var options = {
+      chart: {
+        title: 'C++',
+        subtitle: 'Topic wise Correct and Incorrect answering',
+      },
+      colors: ['#FF9B1D','#7CFC00','#ff0000'],
+      bars: 'vertical' // Required for Material Bar Charts.
+    };
+
+
+    var chart = new google.charts.Bar(document.getElementById('cpp_chart'));
+
+    chart.draw(data, google.charts.Bar.convertOptions(options));
+  }
+</script>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart','bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Value', 'Percentage'],
+          ['Correct', (Number('<%= result.c_titles[0].corr_inputoutput %>')+Number('<%= result.c_titles[0].corr_arrays %>')
+                    +Number('<%= result.c_titles[0].corr_string %>')
+                    +Number('<%= result.c_titles[0].corr_libraryfunction %>')
+                    +Number('<%= result.c_titles[0].corr_pointer %>')
+                    +Number('<%= result.c_titles[0].corr_structureandunion %>')
+                    +Number('<%= result.c_titles[0].corr__function %>')
+                    +Number('<%= result.c_titles[0].corr_basic %>')
+                    +Number('<%= result.c_titles[0].corr_operator %>')
+                    +Number('<%= result.c_titles[0].corr_memoryallocation %>')
+                    +Number('<%= result.c_titles[0].corr_controlstructure %>')
+                    +Number('<%= result.c_titles[0].corr_typedef %>')
+                    +Number('<%= result.c_titles[0].corr_expressions %>')
+                    +Number('<%= result.c_titles[0].corr_preprocessor %>')
+                    +Number('<%= result.c_titles[0].corr_cmdlnearg %>')
+                    +Number('<%= result.c_titles[0].corr_datatypes %>'))/(Number('<%= result.c_titles[0].inputoutput %>')
+                    +Number('<%= result.c_titles[0].arrays %>')
+                    +Number('<%= result.c_titles[0].string %>')
+                    +Number('<%= result.c_titles[0].libraryfunction %>')
+                    +Number('<%= result.c_titles[0].pointer %>')
+                    +Number('<%= result.c_titles[0].structureandunion %>')
+                    +Number('<%= result.c_titles[0]._function %>')
+                    +Number('<%= result.c_titles[0].basic %>')
+                    +Number('<%= result.c_titles[0].operator %>')
+                    +Number('<%= result.c_titles[0].memoryallocation %>')
+                    +Number('<%= result.c_titles[0].controlstructure %>')
+                    +Number('<%= result.c_titles[0].typedef %>')
+                    +Number('<%= result.c_titles[0].expressions %>')
+                    +Number('<%= result.c_titles[0].preprocessor %>')
+                    +Number('<%= result.c_titles[0].cmdlnearg %>')
+                    +Number('<%= result.c_titles[0].datatypes %>'))*100],
+          ['Incorrect',    (Number('<%= result.c_titles[0].incorr_inputoutput %>')+Number('<%= result.c_titles[0].incorr_arrays %>')
+                    +Number('<%= result.c_titles[0].incorr_string %>')
+                    +Number('<%= result.c_titles[0].incorr_libraryfunction %>')
+                    +Number('<%= result.c_titles[0].incorr_pointer %>')
+                    +Number('<%= result.c_titles[0].incorr_structureandunion %>')
+                    +Number('<%= result.c_titles[0].incorr__function %>')
+                    +Number('<%= result.c_titles[0].incorr_basic %>')
+                    +Number('<%= result.c_titles[0].incorr_operator %>')
+                    +Number('<%= result.c_titles[0].incorr_memoryallocation %>')
+                    +Number('<%= result.c_titles[0].incorr_controlstructure %>')
+                    +Number('<%= result.c_titles[0].incorr_typedef %>')
+                    +Number('<%= result.c_titles[0].incorr_expressions %>')
+                    +Number('<%= result.c_titles[0].incorr_preprocessor %>')
+                    +Number('<%= result.c_titles[0].incorr_cmdlnearg %>')
+                    +Number('<%= result.c_titles[0].incorr_datatypes %>'))/(Number('<%= result.c_titles[0].inputoutput %>')
+                    +Number('<%= result.c_titles[0].arrays %>')
+                    +Number('<%= result.c_titles[0].string %>')
+                    +Number('<%= result.c_titles[0].libraryfunction %>')
+                    +Number('<%= result.c_titles[0].pointer %>')
+                    +Number('<%= result.c_titles[0].structureandunion %>')
+                    +Number('<%= result.c_titles[0]._function %>')
+                    +Number('<%= result.c_titles[0].basic %>')
+                    +Number('<%= result.c_titles[0].operator %>')
+                    +Number('<%= result.c_titles[0].memoryallocation %>')
+                    +Number('<%= result.c_titles[0].controlstructure %>')
+                    +Number('<%= result.c_titles[0].typedef %>')
+                    +Number('<%= result.c_titles[0].expressions %>')
+                    +Number('<%= result.c_titles[0].preprocessor %>')
+                    +Number('<%= result.c_titles[0].cmdlnearg %>')
+                    +Number('<%= result.c_titles[0].datatypes %>'))*100]
+        ]);
+
+        var options = {
+          title: 'C - Percentage Correct and Incorrect',
+          colors: ['#7CFC00','#ff0000'],
+          is3D: true,
+          pieStartAngle: 100
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechartc'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart','bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Value', 'Percentage'],
+          ['Correct',  (Number('<%= result.cpp_titles[0].corr_class %>')
+                        +Number('<%= result.cpp_titles[0].corr_overloading %>')
+                        +Number('<%= result.cpp_titles[0].corr_exceptions %>')
+                        +Number('<%= result.cpp_titles[0].corr_streams %>')
+                        +Number('<%= result.cpp_titles[0].corr_namespaces %>')
+                        +Number('<%= result.cpp_titles[0].corr_templates %>')
+                        +Number('<%= result.cpp_titles[0].corr_inheritance %>')
+                        +Number('<%= result.cpp_titles[0].corr_consdes %>')
+                        +Number('<%= result.cpp_titles[0].corr_arrays %>')
+                        +Number('<%= result.cpp_titles[0].corr_basic %>')
+                        +Number('<%= result.cpp_titles[0].corr_operator %>')
+                        +Number('<%= result.cpp_titles[0].corr_pointer %>')
+                        +Number('<%= result.cpp_titles[0].corr__function %>')
+                        +Number('<%= result.cpp_titles[0].corr_libraryfunction %>'))/(Number('<%= result.cpp_titles[0].class %>')
+                        +Number('<%= result.cpp_titles[0].overloading %>')
+                        +Number('<%= result.cpp_titles[0].exceptions %>')
+                        +Number('<%= result.cpp_titles[0].streams %>')
+                        +Number('<%= result.cpp_titles[0].namespaces %>')
+                        +Number('<%= result.cpp_titles[0].templates %>')
+                        +Number('<%= result.cpp_titles[0].inheritance %>')
+                        +Number('<%= result.cpp_titles[0].consdes %>')
+                        +Number('<%= result.cpp_titles[0].arrays %>')
+                        +Number('<%= result.cpp_titles[0].basic %>')
+                        +Number('<%= result.cpp_titles[0].operator %>')
+                        +Number('<%= result.cpp_titles[0].pointer %>')
+                        +Number('<%= result.cpp_titles[0]._function %>')
+                        +Number('<%= result.cpp_titles[0].libraryfunction %>'))*100],
+          ['Incorrect', (Number('<%= result.cpp_titles[0].incorr_class %>')
+                        +Number('<%= result.cpp_titles[0].incorr_overloading %>')
+                        +Number('<%= result.cpp_titles[0].incorr_exceptions %>')
+                        +Number('<%= result.cpp_titles[0].incorr_streams %>')
+                        +Number('<%= result.cpp_titles[0].incorr_namespaces %>')
+                        +Number('<%= result.cpp_titles[0].incorr_templates %>')
+                        +Number('<%= result.cpp_titles[0].incorr_inheritance %>')
+                        +Number('<%= result.cpp_titles[0].incorr_consdes %>')
+                        +Number('<%= result.cpp_titles[0].incorr_arrays %>')
+                        +Number('<%= result.cpp_titles[0].incorr_basic %>')
+                        +Number('<%= result.cpp_titles[0].incorr_operator %>')
+                        +Number('<%= result.cpp_titles[0].incorr_pointer %>')
+                        +Number('<%= result.cpp_titles[0].incorr__function %>')
+                        +Number('<%= result.cpp_titles[0].incorr_libraryfunction %>'))/(Number('<%= result.cpp_titles[0].class %>')
+                        +Number('<%= result.cpp_titles[0].overloading %>')
+                        +Number('<%= result.cpp_titles[0].exceptions %>')
+                        +Number('<%= result.cpp_titles[0].streams %>')
+                        +Number('<%= result.cpp_titles[0].namespaces %>')
+                        +Number('<%= result.cpp_titles[0].templates %>')
+                        +Number('<%= result.cpp_titles[0].inheritance %>')
+                        +Number('<%= result.cpp_titles[0].consdes %>')
+                        +Number('<%= result.cpp_titles[0].arrays %>')
+                        +Number('<%= result.cpp_titles[0].basic %>')
+                        +Number('<%= result.cpp_titles[0].operator %>')
+                        +Number('<%= result.cpp_titles[0].pointer %>')
+                        +Number('<%= result.cpp_titles[0]._function %>')
+                        +Number('<%= result.cpp_titles[0].libraryfunction %>'))*100]
+        ]);
+
+        var options = {
+          title: 'C++ - Percentage Correct and Incorrect',
+          colors: ['#7CFC00','#ff0000'],
+          is3D: true,
+          pieStartAngle: 100
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechartcpp'));
+
+        chart.draw(data, options);
+      }
+    </script>
+<!-- End -->
+    <title>Vlab</title>
+</head>
+<body>
+  <nav class="heading navbar navbar-expand-sm navbar-light">
+    <img class= "nav-brand" src="/images/VIT.png" height=80vw widht=80vw>
+    <h1 class="navbar-brand justify-content-center">V-LAB</h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+    <ul class="navbar-nav text-right">
+      <li class="nav-item dropdown">
+        <a class="nav-link nav-item dropdown-toggle logged" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Profile
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/user/account?view=profile">My Account</a>
+          <a class="dropdown-item" href="/report">Report</a>
+          <a class="dropdown-item" href="/logout">Logout</a>
+        </div>
+      </li>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/leaderboard">Leaderboard</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Test
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/test/c">C</a>
+          <a class="dropdown-item" href="/test/cpp">C++</a>
+          <a class="dropdown-item" href="/test/java">Java</a>
+          <a class="dropdown-item" href="/test/python">Python</a>
+        </div>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#">About Us</a><i class="fa fa-users" aria-hidden="true"></i></li class="nav-item">
+      <li class="nav-item"><a class="nav-link" href="#">Contact</a><i class="fa fa-phone-square" aria-hidden="true"></i></li>
+    </ul>
+  </div>
+  </nav>
+  
+  <div class="container">
+    <h1 class="mainheading">Total Tests Attempted</h1><br>
+    <div class="row">
+      <div class="col-sm-3">
+        <h2 class="subheading">C</h2>
+        <h4 class="valuegot"><%= result.total_c %></h4>
+      </div>
+      <div class="col-sm-3">
+        <h2 class="subheading">C++</h2>
+        <h4 class="valuegot"><%= result.total_cpp %></h4>
+      </div>
+      <div class="col-sm-3">
+        <h2 class="subheading">Java</h2>
+        <h4 class="valuegot"></h4>
+      </div>
+      <div class="col-sm-3">
+        <h2 class="subheading">Python</h2>
+        <h4 class="valuegot"></h4>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <h1 class="mainheading bg-dark nav-item">C</h1>
+  <% if(!result.total_c){ %>
+    <div class="container" style="margin: auto; text-align: center;">
+      <img src="/images/nodatafound.png" style="width: 15%; padding-bottom: 2%; margin-top: 2%;">
+      <h2 class="valuegot">You haven't taken any test till now</h2>
+      <a href="/test/c"><button class="button"><span>Take Test Now!</span></button></a>
+    </div>
+  <% }else{ %>
+    <div id="c_chart"></div>
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <div id="piechartc" style="width: 100%; height: 300px;"></div>
+      </div>
+      <div class="col-sm-7">
+        <div class="row">
+          <div class="col">
+            <br>
+            <h1 class="mainheading active">C - Test Statistics</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <h2 class="subheading">Highest Score</h2>
+            <h4 class="valuegot"><%= result.c_max %></h4>
+          </div>
+          <div class="col-sm-4">
+            <h2 class="subheading">Lowest Score</h2>
+            <h4 class="valuegot"><%= result.c_min %></h4>
+          </div>
+          <div class="col-sm-4">
+            <h2 class="subheading">Avg Score</h2>
+            <h4 class="valuegot"><%= result.c_avg %></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% } %>
+  <hr>
+  <h1 class="mainheading bg-dark nav-item">C++</h1>
+  <% if(!result.total_cpp){ %>
+    <div class="container" style="margin: auto; text-align: center;">
+      <img src="/images/nodatafound.png" style="width: 15%; padding-bottom: 2%; margin-top: 2%;">
+      <h2 class="valuegot">You haven't taken any test till now</h2>
+      <a href="/test/cpp"><button class="button"><span>Take Test Now!</span></button></a>
+      <hr>
+    </div>
+  <% }else{ %>
+    <div id="cpp_chart"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <div id="piechartcpp" style="width: 100%; height: 300px;"></div>
+      </div>
+      <div class="col-sm-7">
+        <div class="row">
+          <div class="col">
+            <br>
+            <h1 class="mainheading active">C++ - Test Statistics</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <h2 class="subheading">Highest Score</h2>
+            <h4 class="valuegot"><%= result.cpp_max %></h4>
+          </div>
+          <div class="col-sm-4">
+            <h2 class="subheading">Lowest Score</h2>
+            <h4 class="valuegot"><%= result.cpp_min %></h4>
+          </div>
+          <div class="col-sm-4">
+            <h2 class="subheading">Avg Score</h2>
+            <h4 class="valuegot"><%= result.cpp_avg %></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+
+  
+
+
+ <nav class="footer sticky-bottom fixed-bottom navbar-light bg-light">
+        <pre class="foot">© 2020 Copyright: <a id="VITLINK" href="http://chennai.vit.ac.in/"> VIT CHENNAI </a></pre>
+</nav>
+</body>
+</html>

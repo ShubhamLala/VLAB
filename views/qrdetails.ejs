@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styleqrdetails.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Previous Results</title>
+</head>
+<body>
+    <nav class="heading navbar navbar-expand-sm navbar-light">
+        <img class= "nav-brand" src="/images/VIT.png" height=80px widht=80px>
+        <h1 class="navbar-brand justify-content-center">V-LAB</h1>
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+    <div class="progress">
+  <div class="progress-bar bg-dark" style="width:100%"></div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-warning" style="width:100%; background-color: #fc7a00 !important;"></div>
+ </div>
+   <div class="progress">
+  <div class="progress-bar bg-dark" style="width:100%"></div>
+  </div>
+        </div>
+    </nav>
+</div>
+<%if(!show){%>
+    <form action="http://localhost:4000/qrdetails/<%=link%>/<%=roll%>" method="POST">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit">
+    </form>
+<%}%>
+
+<%if(show){%>
+
+    <table border="1px" class="table">
+            <th>RollNo</th>
+            <th>Category</th>
+            <th>Marks</th>
+            <th>Date and Time</th>
+        <% for(var i=0;i < finalresult.length; i++) { %>        
+            <tr>
+            <td><%= finalresult[i][0] %></td>
+            <td><%= finalresult[i][1] %></td>
+            <td><%= finalresult[i][2] %></td>
+            <td><%= finalresult[i][3] %></td>
+            </tr>
+        <% } %>
+            </table>
+            <div class="progress">
+                <div class="progress-bar bg-dark footer fixed-bottom navbar-light bg-light" style="width:100%"></div>
+              </div>
+              <div class="progress">
+<%}%>
+</body>
+</html>

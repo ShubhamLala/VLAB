@@ -1,0 +1,263 @@
+.scrollable{
+    overflow: scroll;
+    height: 50%;
+    width: 100%;
+}
+.question{
+    border: 1px solid black;
+    box-shadow: 1px 1px 8px gray;
+    position: relative;
+    padding: 8px;
+    margin: 2% 10%;
+    width: 50%;
+    height: fit-content;
+    background: white;
+    border-radius: 10px;
+    float: left;
+}
+
+.question-nav-button{
+    width: 13%;
+    height: 13%;
+    transition: transform .2s;
+    padding: 2%;
+    border-color: #4753FC;
+    border-radius: 10px;
+    margin-bottom: 3%;
+    margin-left: 5%;
+    font-size: 1.2em;
+    background-color: rgb(255, 255, 255);
+}
+.question-nav-button:hover
+{
+    transform: scale(1.2);
+}
+.sidebar{
+    border: 1px solid black;
+    box-shadow: 1px 1px 8px gray;
+    width: 22%;
+    margin-top: 2%;
+    padding: 1%;
+    position: relative;
+    float: right;
+    margin: 2% auto;
+    margin-bottom: 5%;
+    border-radius: 10px;
+}
+.submit
+{
+    height: 15%;
+    margin-left: 35%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    border-bottom: 5%;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #FF5500;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 5px;
+    width: 30%;
+    cursor: pointer;
+    transition: transform .2s;
+}
+.submit:hover
+{
+    transform: scale(1.2);
+}
+.flagged-button{
+    width: 13%;
+    height: 13%;
+    padding: 5px;
+    transition: transform .2s;
+    border-radius: 10px;
+    margin-bottom: 3%;
+    margin-left: 5%;
+    font-size: 1.2em;
+    background-color: #ff33ff;
+    border-color: #4753FC;
+}
+.flagged-button:hover
+{
+    transform: scale(1.2);
+}
+.visited-button{
+    width: 13%;
+    height: 13%;
+    padding: 5px;
+    transition: transform .2s;
+    border-radius: 10px;
+    margin-bottom: 3%;
+    margin-left: 5%;
+    font-size: 1.2em;
+    background-color: #FF222A;
+    border-color: #4753FC;
+}
+.visited-button:hover
+{
+    transform: scale(1.2);
+}
+.answered-button{
+    width: 13%;
+    height: 13%;
+    padding: 5px;
+    transition: transform .2s;
+    border-radius: 10px;
+    margin-bottom: 3%;
+    font-size: 1.2em;
+    margin-left: 5%;
+    background-color:#93FD4C;
+    border-color: #4753FC;
+}
+.answered-button:hover
+{
+    transform: scale(1.2);
+}
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.question button
+{
+    width: auto;
+    padding: 1%;
+    margin-right: 5px;
+    border-radius: 10px;
+    border-color: #4753FC;
+    background-color: #000;
+    color: #fff;
+    transition: transform .2s; 
+}
+.question button:hover
+{
+    transform: scale(1.2);
+}
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#VITLINK
+{
+    text-decoration: none;
+}
+.foot
+{
+margin: 1% .5%;
+}
+.foot
+{
+    display: flex;
+    justify-content: left;
+    margin-bottom: 0;
+}
+.nav-item
+{
+    color: white;
+}
+.navbar-toggler-icon {
+    background-color: #FF5500;
+  }
+.navbar-brand{
+    align-content: center;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.logged
+{
+    display: flex;
+    justify-content: right;
+    margin-right: 0;
+}
+.heading
+{
+    margin: auto;
+    background-color:rgb(255, 255, 255);
+}
+.heading h1
+{
+    margin: auto;
+    color: black;
+    display: flex;
+    justify-content: center;
+    font-size: 5vw;
+}
+.heading .image
+{
+    float: left;
+}
+.heading ul
+{
+    display: inline-flex;
+    list-style-type: none;
+    margin-right: 15px;
+    text-decoration: none;
+    margin-top: 10px;
+    box-align: right;
+    text-align: right;
+    font-size: 1.2em;
+}
+.heading ul li
+{
+    margin-top: 20px;
+    padding: 10px;
+
+}
+.heading ul li:first-child
+{
+    border-right: 1px solid #fff;
+
+}
+.heading ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+.headingv
+{
+    margin-left: auto;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+.headingl
+{
+    float: right;
+}
+.active
+{
+    background-color: #FF5500;
+}
+@media screen and (max-width: 1000px) {
+    .question{
+        float: left;
+        font-size: 3vw;
+        width: fit-content;
+    }
+    .sidebar{
+       width: 100%;
+       margin-top: 5%;
+    }
+    .question :double-button
+    {
+        padding: 2%;
+        margin-top: 2%;
+    }
+  }
+input:focus{
+    outline: none;
+}
+button:focus{
+    outline: none;
+}

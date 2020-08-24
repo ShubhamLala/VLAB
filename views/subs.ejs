@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylepractice.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Vlab</title>
+</head>
+<body>
+        <div class="heading">
+                <img class= "image" src="/images/VIT.png" height=80px widht=80px>
+                <h1 class="headingv">V-LAB</h1>
+                
+        
+            </div>
+                    <div class = "menu-bar">
+                    <ul>
+                        <li><a href="/">Home</a><i class="fa fa-home" aria-hidden="true"></i></li>
+                        <li class="active"><a href="#">Practice</a><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            <div class="practice-sub">
+                                <ul>
+                                        <li><a href="/practice/c">C/C++</a></li>
+                                        <li><a href="/practice/java">Java</a></li>
+                                        <li><a href="/practice/python">Python</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="/test">Test</a><i class="fa fa-question" aria-hidden="true"></i>
+                        </li>
+                        <li><a href="#">About Us</a><i class="fa fa-users" aria-hidden="true"></i></li>
+                        <li><a href="#">Contact</a><i class="fa fa-phone-square" aria-hidden="true"></i></li>
+                </ul>    
+            </div>
+            
+            <div class="footer">
+                <p>&copy;VITCHENNAI</p>
+            </div>
+    <div class="list">
+    <%if(practiceSub === 'c'){%>
+        <ul>
+        <% for(var i =0;i < title.length; i++){ %>
+            <li><a href=""><%= title[i].title %> </a></li>
+        <%}%>
+        </ul>
+    <%}%>
+    <%if(practiceSub === 'java'){%>
+        <ul>
+            <li>Java Sub 1</li>
+            <li>Java Sub 2</li>
+            <li>Java Sub 3</li>
+        </ul>
+    <%}%>
+    <%if(practiceSub === 'python'){%>
+        <ul>
+            <li>Python Sub 1</li>
+            <li>Python Sub 2</li>
+            <li>Python Sub 3</li>
+        </ul>
+    <%}%>
+    </div>
+</body>
+</html>

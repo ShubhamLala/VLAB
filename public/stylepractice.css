@@ -1,0 +1,194 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #FED8B1;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.heading
+{
+    background-color:#4753FC;
+    height: 100px;
+    background-size: 100%;
+}
+.heading h1
+{
+    margin-left: 15px;
+    margin-top: 5px;
+    color: #fff;
+    align-content: left;
+    font-size: 5em;
+}
+.heading .image
+{
+    margin-top: 10px;
+    margin-left:15px;
+    float: left;
+}
+.heading ul
+{
+    display: inline-flex;
+    list-style-type: none;
+    margin-right: 15px;
+    text-decoration: none;
+    margin-top: 10px;
+    box-align: right;
+    text-align: right;
+    font-size: 1.2em;
+}
+.heading ul li
+{
+    margin-top: 20px;
+    padding: 10px;
+
+}
+.heading ul li:first-child
+{
+    border-right: 1px solid #fff;
+
+}
+.heading ul li a
+{
+    text-decoration: none;
+    color: #fff;
+}
+.headingv
+{
+    float:left;
+}
+.headingl
+{
+    float: right;
+}
+.menu-bar
+{
+    background-color: #FF962C;
+    text-align: center;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    width: 100%;
+    color: #fff;
+}
+.menu-bar ul li
+{
+    width: 20%;
+    margin: 15px;
+    padding: 15px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: #fff;
+}
+.active, .menu-bar ul li:hover
+{
+    background-color: #FF5500;
+}
+.menu-bar .fa
+{
+    margin-left: 8px;
+}
+.practice-sub
+{
+    display: none;
+}
+
+.menu-bar ul li:hover .practice-sub
+{
+    display: block;
+    position: absolute;
+    background-color: #FF962C;
+    margin-top: 15px; 
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .practice-sub ul
+{
+    display: block;
+    margin: 10px;
+}
+.practice-sub
+{
+    background-color: #FF962C;
+    text-align: left;
+}
+.practice-sub ul
+{
+    display: inline-flex;
+    list-style: none;
+    width: 100%;
+    color: #fff;
+}
+.practice-sub ul li:hover
+{
+    background-color: #FF5500;
+}
+.menu-bar ul li:hover .practice-sub ul li
+{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.menu-bar ul li:hover .practice-sub ul li:last-child
+{
+    border-bottom: none;
+}
+.footer
+{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color:#4753FC;
+    color: white;
+    text-align: center;
+}
+.footer p
+{
+    position: relative;
+    margin-left: 15px;
+    text-align: left;
+    bottom: 0;
+}
+.text1
+{
+    float: left;
+}
+.text1 p
+{
+    text-align: right;
+}
+.text2
+{
+    float: right;
+}
+.list li a
+{
+    text-decoration: none;
+    color:#000;
+}
+.list li
+{
+    width: 150px;
+    border: 5px solid #FF5500;
+    padding: 5px;
+    margin: 20px;
+    list-style: none;
+}
+input:focus{
+    outline: none;
+}
+button:focus{
+    outline: none;
+}

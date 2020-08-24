@@ -1,0 +1,188 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#VITLINK
+{
+    text-decoration: none;
+}
+.foot
+{
+    margin: 1% .5%;
+    bottom: 0;
+    display: flex;
+    justify-content: left;
+    
+}
+.nav-item
+{
+    color: white;
+}
+.navbar-toggler-icon {
+    background-color: #FF5500;
+  }
+.navbar-brand{
+    align-content: center;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.logged
+{
+    display: flex;
+    justify-content: right;
+    margin-right: 0;
+}
+.heading
+{
+    margin: auto;
+    background-color:rgb(255, 255, 255);
+}
+.heading h1
+{
+    margin: auto;
+    color: black;
+    display: flex;
+    justify-content: center;
+    font-size: 5vw;
+}
+.heading .image
+{
+    float: left;
+}
+.heading ul
+{
+    display: inline-flex;
+    list-style-type: none;
+    margin-right: 15px;
+    text-decoration: none;
+    margin-top: 10px;
+    box-align: right;
+    text-align: right;
+    font-size: 1.2em;
+}
+.heading ul li
+{
+    margin-top: 20px;
+    padding: 10px;
+
+}
+.heading ul li:first-child
+{
+    border-right: 1px solid #fff;
+
+}
+.heading ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+.headingv
+{
+    margin-left: auto;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+.headingl
+{
+    float: right;
+}
+.active
+{
+    background-color: #FF5500;
+}
+
+.register
+{
+    margin: 2%;
+    margin-left: 45%;
+    width: 25%;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px black;
+    background-color:rgb(255, 255, 255);
+}
+input
+{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    border-radius: 10px;
+    border: 2px solid #4753FC;
+}
+.button
+{
+    margin: 0 25%;
+    display: inline-block;
+    position: relative;
+    border-radius: 10px;
+    background-color: #FF5500;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 5px;
+    width: 50%;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  @media screen and (max-width: 1000px) {
+    .register {
+        margin: 2% auto;
+       width: 50%;
+       display: block;
+       float: none;
+    }
+  }
+  .loggedin:hover
+  {
+      text-decoration: none;
+  }
+  @media screen and (max-width: 600px) {
+    .register {
+        margin: 2% auto;
+       width: 80%;
+       display: block;
+       float: none;
+    }
+  }
+  input:focus{
+    outline: none;
+}
+button:focus{
+    outline: none;
+}

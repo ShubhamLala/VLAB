@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylehome.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Vlab</title>
+</head>
+<body>
+  <nav class="heading navbar navbar-expand-sm navbar-light">
+    <img class= "nav-brand" src="/images/VIT.png" height=80vw widht=80vw>
+    <h1 class="navbar-brand justify-content-center">V-LAB</h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+    <ul class="navbar-nav text-right">
+      <li class="nav-item dropdown">
+        <a class="nav-link nav-item dropdown-toggle logged" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Profile
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/user/account?view=profile">My Account</a>
+          <a class="dropdown-item" href="/report">Report</a>
+          <a class="dropdown-item" href="/logout">Logout</a>
+        </div>
+      </li>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+        <li class="nav-item active"><a class="nav-link" href="/home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/leaderboard">Leaderboard</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Test
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/test/c">C</a>
+          <a class="dropdown-item" href="/test/cpp">C++</a>
+          <a class="dropdown-item" href="/test/java">Java</a>
+          <a class="dropdown-item" href="/test/python">Python</a>
+        </div>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#">About Us</a><i class="fa fa-users" aria-hidden="true"></i></li class="nav-item">
+      <li class="nav-item"><a class="nav-link" href="#">Contact</a><i class="fa fa-phone-square" aria-hidden="true"></i></li>
+    </ul>
+  </div>
+  </nav>
+
+  <div class="instruction">
+    <h2 align="center">INSTRUCTIONS</h2>
+    <hr>
+    <ul>
+      <li>The duration for this test is 60 mins and the total number of questions to be answered are 50.</li>
+      <li>The visited and unanswered questions are marked in <span id="red">red.</span></li>
+      <li>The visited and answered questions are marked in <span id="green">green.</span></li>
+      <li>The flagged questions are marked in <span id="purple">purple.</span></li>
+      <li>The non-visited questions are having the default white color.</li>
+      <li>Doing anything other than answering the test for example opening a new tab will result in autosubmit.</li>
+      <li>Once the test is over you can generate the certificate.</li>
+      <li>Depending on your performance you will either get a merit or a participation certificate.</li>
+    </ul>
+  </div>
+ <nav class="footer sticky-bottom fixed-bottom navbar-light bg-light">
+        <pre class="foot">© 2020 Copyright: <a id="VITLINK" href="http://chennai.vit.ac.in/"> VIT CHENNAI </a></pre>
+</nav>
+</body>
+</html>

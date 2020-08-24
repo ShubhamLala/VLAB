@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/certificate.css"> -->
+    <title>Vlab</title>
+</head>
+<body>
+    <img class="image" src="/images/<%= type %>" style="z-index: -10;
+    position: absolute;
+    height: 650px;
+    width: 792px;
+    border: 2px solid black;
+    background-size: cover;">
+    <div id="name" style="position: absolute;
+     top: 300px;
+    margin-left: 45px; 
+    font-family: 'Roboto Condensed', sans-serif;"><h1><%= firstname %> <%= lastname %><br><%=rollno%></h1></div>
+    <img src="<%= url %> " alt="" style="position: absolute; top: 460px; margin-left: 560px;">
+    <script src="/qrcode.js"></script>
+</body>
+</html>
